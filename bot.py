@@ -1,3 +1,4 @@
+import os
 import asyncio
 import time
 import random
@@ -11,10 +12,10 @@ except RuntimeError:
 
 from pyrogram import Client, filters
 
-# 🔑 YOUR DETAILS
-API_ID = 31373262
-API_HASH = "d677d3aa5b28886108efb00df4d3e52a"
-BOT_TOKEN = "8623891050:AAHRtb_j1FlaoYu9z5Ep-YztSwLPFpR-QSM"
+# 🔑 FROM RENDER ENV
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # 🤖 ONLY REAL WORKING BOT TOKENS
 bot_tokens = [
